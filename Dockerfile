@@ -14,8 +14,8 @@ RUN apt-get update && apt-get install -y \
 	    locales
 
 RUN dpkg-reconfigure locales && \
-    locale-gen en_US.UTF-8 && \
-    update-locale LANG=en_US.UTF-8
+    locale-gen C.UTF-8 && \
+    update-locale LANG=C.UTF-8
 
 RUN apt-get clean && \
     apt-get autoclean && \
@@ -25,4 +25,4 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -f /etc/dpkg/dpkg.cfg.d/02apt-speedup
 
-ENV LC_ALL en_US.UTF-8
+ENV LC_ALL C.UTF-8
