@@ -11,7 +11,7 @@ RUN rm -f /etc/motd && \
     touch "/(C) Babim"
 
 RUN apt-get update && apt-get install -y \
-	    locales wget nano
+	    locales wget nano net-tools
 
 RUN dpkg-reconfigure locales && \
     locale-gen C.UTF-8 && \
