@@ -25,7 +25,5 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -f /etc/dpkg/dpkg.cfg.d/02apt-speedup
 
-CMD ["/usr/sbin/sshd", "-D"]
-
 ENV LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
