@@ -38,5 +38,9 @@ ENV NOTVISIBLE "in users profile" LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+CMD ["/startup.sh"]
+
 EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+
