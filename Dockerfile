@@ -25,5 +25,9 @@ RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -f /etc/dpkg/dpkg.cfg.d/02apt-speedup
 
+ADD startup.sh /startup.sh
+RUN chmod +x /startup.sh
+CMD ["/startup.sh"]
+
 ENV LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
