@@ -26,8 +26,8 @@ RUN apt-get clean && \
     rm -f /etc/dpkg/dpkg.cfg.d/02apt-speedup
 
 RUN mkdir /var/run/sshd
-# set password root 123456
-RUN echo 'root:123456' | chpasswd
+# set password root
+RUN echo 'root:root' | chpasswd
 # allow root ssh
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
