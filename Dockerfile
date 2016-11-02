@@ -11,7 +11,7 @@ RUN rm -f /etc/motd && \
     touch "/(C) Babim"
 
 RUN apt-get update && apt-get install -y \
-	    locales wget nano openssh-server net-tools
+	    locales wget nano openssh-server net-tools cron
 
 RUN dpkg-reconfigure locales && \
     locale-gen C.UTF-8 && \
@@ -37,6 +37,10 @@ RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so
 ENV NOTVISIBLE "in users profile" LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 RUN echo "export VISIBLE=now" >> /etc/profile
+
+COPY docker-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["/usr/sbin/sshd", "-D"]
 
