@@ -38,10 +38,6 @@ ENV NOTVISIBLE "in users profile" LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 RUN echo "export VISIBLE=now" >> /etc/profile
 
-COPY docker-entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
 CMD ["/usr/sbin/sshd", "-D"]
 
 EXPOSE 22
