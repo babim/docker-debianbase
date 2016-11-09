@@ -38,6 +38,8 @@ ENV NOTVISIBLE "in users profile" LC_ALL C.UTF-8
 ENV TZ Asia/Ho_Chi_Minh
 RUN echo "export VISIBLE=now" >> /etc/profile
 
+ADD runssh.sh /runssh.sh
+RUN chmod +x /runssh.sh
 CMD ["/usr/sbin/sshd", "-D"]
 
 EXPOSE 22
