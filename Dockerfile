@@ -41,5 +41,6 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 ADD runssh.sh /runssh.sh
 RUN chmod +x /runssh.sh
 CMD ["/usr/sbin/sshd", "-D"]
+ENTRYPOINT ["/runssh.sh"]
 EXPOSE 22
 
