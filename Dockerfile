@@ -3,6 +3,10 @@ FROM debian:jessie-slim
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
 
+ENV TZ Asia/Ho_Chi_Minh
+ARG DEBIAN_FRONTEND="noninteractive"
+ENV TERM="xterm" LANG="C.UTF-8" LC_ALL="C.UTF-8"
+
 RUN rm -f /etc/motd && \
     echo "---" > /etc/motd && \
     echo "Support by Duc Anh Babim. Contact: babim@matmagoc.com" >> /etc/motd && \
@@ -25,6 +29,3 @@ RUN apt-get clean && \
     rm -rf /tmp/* /var/tmp/* && \
     rm -rf /var/lib/apt/lists/* && \
     rm -f /etc/dpkg/dpkg.cfg.d/02apt-speedup
-
-ENV LC_ALL C.UTF-8
-ENV TZ Asia/Ho_Chi_Minh
