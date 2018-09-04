@@ -1,4 +1,4 @@
-FROM debian:jessie-slim
+FROM debian:wheezy
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
