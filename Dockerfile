@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM i386/debian:stretch-slim
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
