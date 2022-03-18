@@ -1,4 +1,4 @@
-FROM i386/debian:wheezy
+FROM i386/debian:bullseye
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
