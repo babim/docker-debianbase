@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:bullseye-slim
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
