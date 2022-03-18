@@ -1,4 +1,4 @@
-FROM debian:wheezy
+FROM debian:bullseye
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
