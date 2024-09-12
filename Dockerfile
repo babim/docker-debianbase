@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
