@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:bookworm
 # Maintainer
 # ----------
 MAINTAINER babim <babim@matmagoc.com>
